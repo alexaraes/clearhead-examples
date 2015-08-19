@@ -1,0 +1,84 @@
+#stickyDiv {
+	box-sizing: border-box;
+	font-family: Arial;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 777;
+}
+
+#cartP {
+	margin-bottom: 8px;
+}
+
+#welcomeMsg {
+	box-sizing: border-box;
+	padding: 10px 10px 10px 30px;
+	background-color: rgb(54, 154, 190);
+	color: white;
+	display: inline-block;
+	width: 240px;
+	height: 100%;
+}
+
+.itemDiv {
+	box-sizing: border-box;
+	display: inline-block;
+	background-color: white;
+	width: 300px;
+	height: 100%;
+	padding: 0 0 20px 20px;
+}
+
+#productImgDiv {
+	box-sizing: border-box;
+	width: 75px;
+	display: inline-block;
+}
+
+img {
+	width: 100%;
+}
+
+#productInfoDiv {
+	box-sizing: border-box;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.productInfo, .productTitle {
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.productInfo {
+	box-sizing: border-box;
+	color: gray;
+}
+
+#xDiv {
+	box-sizing: border-box;
+	text-align: right;
+	padding: 15px 10px 20px 0;
+}
+
+button {
+	display: inline-block;
+	border: none;
+	height: 25px;
+	color: white;
+}
+
+#btnDiv {
+	box-sizing: border-box;
+	padding: 10px 0 0 0;
+	margin: 10px 0 0 0;
+}
+
+#cartBtn {
+	background-color: orange;
+}
+
+#shopBtn {
+	margin: 0 30px 0 0;
+}

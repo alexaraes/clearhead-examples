@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-	
+	jQuery("#stickyDiv").hide();
 	if(!jQuery('#cartHeader').html().indexOf('my cart (0)') > -1){
 
 		!function(n){"use strict";function r(n){var r=i.exec(n.toString());if(!r)throw new TypeError("Multiline comment missing.");return r[1]}function t(n,r){return n.replace(c,function(n,t){for(var i=t.split("."),o=i.length,s=r,u=0;o>u;u++){if(s=s[i[u]],s===e)throw'tim: "'+i[u]+'" not found in '+n;if(u===o-1)return s}})}n.timpl=function(n,e){return t(n.call?r(n):n,e||{}).replace(/^\s+|\s+$/g,"")};var e,i=/\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)[ \t]*\*\//,o="{{",s="}}",u="[a-z0-9_$][\\.a-z0-9_]*",c=new RegExp(o+"\\s*("+u+")\\s*"+s,"gi")}(window);
@@ -34,19 +34,22 @@ jQuery(document).ready(function() {
 			</div>
 		*/});
 		
-		
-			
-			
 		var stickyShow = function() {
 			
-			jQuery('#stickyDiv').animate({"right":"600px"}, 1500);
+			jQuery('#stickyDiv').animate({"right":0}, "slow");
+			
 			console.log('stickyShow fire');
 		};
 
        	setTimeout(stickyShow, 3000);
-
        	jQuery('body').append(html);
+		
+		
+			   
 
+			
+		
+		jQuery('body').css('overflow-x', 'hidden');
 		jQuery('img').css('width', '100%');
 
 		jQuery('button a').css({'text-decoration': 'none', 'color': 'white'});
@@ -70,10 +73,9 @@ jQuery(document).ready(function() {
 			'font-family': 'Arial',
 			'position': 'absolute',
 			'bottom': 0,
-			'right': 0,
+			'right': '-600px',
 			'z-index': 777,
-			'background-color': 'rgb(54, 154, 190)',
-			'margin-right': '-600px'
+			'background-color': 'rgb(54, 154, 190)'
 		});
 
 		jQuery('.cartP').css('margin', '15px 15px');

@@ -3,11 +3,11 @@ jQuery(document).ready(function() {
 		
 		jQuery('#stickyDiv').hide();
 			
-		if(!jQuery('#cartHeader').html().indexOf('my cart (0)') > -1){
+		// if(!jQuery('#cartHeader').html().indexOf('my cart (0)') > -1){
     		
     			jQuery('#containDiv').animate({width:'toggle'},3000); 
     		
-        }
+        // }
 		   
 
 		var html = timpl(function () {/*
@@ -15,12 +15,12 @@ jQuery(document).ready(function() {
 			<div id="stickyDiv">
 				<div id="welcomeMsg">
 					<h1 class="cartH">Welcome Back!</h1>
-					<h5 class="cartP">We saved your cart for you.</h5>
-					<h5 class="cartP">Your shopping cart: <br>3 items</h5>
+					<p class="cartP">We saved your cart for you.</p>
+					<p class="cartP">Your shopping cart: <br>3 items</p>
 				</div>
 				<div class="itemDiv">
-					<div id="xDiv"><a class="xlink" href="#">x</a></div>
 					<div class="itemDiv2">
+						<div id="xDiv"><a class="xlink" href="#">x</a></div>
 						<div id="productImgDiv">
 							<img src="http://www.bludot.com/media/catalog/product/f/l/fl1_flaskt_as_cord_flask_table_lamp_ash_3.jpg">
 						</div>
@@ -39,7 +39,6 @@ jQuery(document).ready(function() {
 		</div>
 		*/});
 
-	jQuery('*').css('border', '2px solid red');
 	jQuery('body').append(html);
 
 	jQuery('img').css('width', '100%');
@@ -54,7 +53,8 @@ jQuery(document).ready(function() {
 		'border': 'none',
 		'height': '25px',
 		'color': 'white',
-		'padding': '0 5px 0 5px'
+		'margin': '0 0 0 10px',
+		'padding': '0 5px 0  5px'
 	});
 
 	jQuery('#stickyDiv').css({
@@ -63,26 +63,24 @@ jQuery(document).ready(function() {
 		'position': 'absolute',
 		'bottom': 0,
 		'right': 0,
-		'z-index': 777
+		'z-index': 777,
+		'background-color': 'rgb(54, 154, 190)'
 	});
 
-	jQuery('.cartP').css('margin-bottom', '8px');
+	jQuery('.cartP').css('margin', '15px 15px');
 
-	// jQuery('.cartH').css({
-	// 	'color': 'white',
-	// 	'font-weight': 'bold',
-	// 	'font-size': '1.5 em'
-	// });
+	jQuery('.cartH').css({
+		'font-size': '25px',
+		'margin': '15px 15px'
+	});
 
 	jQuery('#welcomeMsg').css({
 		'text-align': 'left',
 		'box-sizing': 'border-box',
-		'padding': '10px 0 10px 20px',
+		'padding': '0 10px',
 		'background-color': 'rgb(54, 154, 190)',
 		'color': 'white',
-		'display': 'inline-block',
-		'width': '240px',
-		'height': '100%'
+		'display': 'inline-block'
 	});
 
 	jQuery('.itemDiv').css({
@@ -91,7 +89,7 @@ jQuery(document).ready(function() {
 		'background-color': 'white',
 		'width': '300px',
 		'height': '100%',
-		'padding': '0 0 20px 0'
+		'padding': '0 5px 0 10px'
 	});
 
 	jQuery('#productImgDiv').css({
@@ -103,33 +101,42 @@ jQuery(document).ready(function() {
 	jQuery('#productInfoDiv').css({
 		'box-sizing': 'border-box',
 		'display': 'inline-block',
-		'margin-left': '25px'
+		'margin-left': '25px',
+		'vertical-align': 'top'
 	});
 
 	jQuery('.productTitle').css({
 		'box-sizing': 'border-box',
-		'font-size': '14px'
+		'font-size': '14px',
+		'margin-top': '5px',
+		'color': 'black',
+		'font-weight': 'bold'
 	});
 
 	jQuery('.productInfo').css({
 		'box-sizing': 'border-box',
-		'color': 'gray'
+		'color': 'black',
+		'text-align': 'left'
 	});
 
 	jQuery('#xDiv').css({
 		'box-sizing': 'border-box',
 		'text-align': 'right',
-		'padding': '15px 10px 0 0'
+		'font-size': '18px'
 	});
 
 	jQuery('#btnDiv').css({
 		'box-sizing': 'border-box',
-		'margin-top': '10px'
+		'margin': '20px 0 20px 0'
+
 	});
 
 	jQuery('#cartBtn').css('background-color', 'orange');
 
-	jQuery('#shopBtn').css('margin-right', '30px');
+	jQuery('#shopBtn').css({
+		'margin-right': '30px',
+		'width': '140px'
+	});
 
 	jQuery('.xlink, .btn').click(function() {
 		jQuery('#stickyDiv').hide();

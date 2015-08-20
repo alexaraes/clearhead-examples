@@ -5,9 +5,11 @@ Took a few days to understand what exactly I had to do to create these deliverab
 
 V1 has been a bit challenging, since there's more HTML and CSS to create. 
 
-With the original code not being available to me, I'm not exactly sure how to pull a picture.
+MY CSS IS BEAUTIFUL UNTIL I PASTE IT IN THE CONSOLE
 
-Currently I'm working on getting the slide out to work. Some elements within the #topCartContent div are not coming along for the ride.
+http://ih0.redbubble.net/image.30416963.4324/fc,550x550,white.u5.jpg
+
+WHYYYY
 
 ##V2
 

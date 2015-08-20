@@ -3,13 +3,18 @@ Took a few days to understand what exactly I had to do to create these deliverab
 
 ##V1
 
-V1 has been a bit challenging, since there's more HTML and CSS to create. 
+This one was super difficult because CSS is a meanie.
 
-MY CSS IS BEAUTIFUL UNTIL I PASTE IT IN THE CONSOLE
+I coded out the HTML and CSS first to get the styling looking right, and then injected it all into my jQuery and that was a huge mistake.
+
+Also it took me forever to find the right combination of values for the .animate().
+
+I most definitely could have made some variables for my selectors but my wrist just popped in a way I've never heard before.
 
 http://ih0.redbubble.net/image.30416963.4324/fc,550x550,white.u5.jpg
 
-WHYYYY
+BUT, all in all I'm proud of it, and I hope it's close to what you wanted to see from me!
+
 
 ##V2
 

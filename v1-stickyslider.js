@@ -39,18 +39,13 @@ jQuery(document).ready(function() {
 			
 		var stickyShow = function() {
 			
-			jQuery('#stickyDiv').animate({"left":"0px"}, "slow").addClass('visible');
+			jQuery('#stickyDiv').animate({"right":"600px"}, 1500);
 			console.log('stickyShow fire');
 		};
 
        	setTimeout(stickyShow, 3000);
-       	jQuery('body').append(html);
-		
-		
-			   
 
-			
-		
+       	jQuery('body').append(html);
 
 		jQuery('img').css('width', '100%');
 
@@ -77,7 +72,8 @@ jQuery(document).ready(function() {
 			'bottom': 0,
 			'right': 0,
 			'z-index': 777,
-			'background-color': 'rgb(54, 154, 190)'
+			'background-color': 'rgb(54, 154, 190)',
+			'margin-right': '-600px'
 		});
 
 		jQuery('.cartP').css('margin', '15px 15px');

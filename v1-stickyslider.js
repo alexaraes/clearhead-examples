@@ -157,8 +157,8 @@ jQuery(document).ready(function() {
 		});
 
 		jQuery('.xlink, .btn').click(function() {
+			alert('{closed-modal|view-cart|checkout}');
 			jQuery('#stickyDiv').animate({"right":'-600px'}, "slow");
-			//alert('{closed-modal|view-cart|checkout}');
 		});
 	}
 });

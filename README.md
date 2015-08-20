@@ -9,6 +9,8 @@ I coded out the HTML and CSS first to get the styling looking right, and then in
 
 Also it took me forever to find the right combination of values for the .animate().
 
+ALSO the orange button has no arrow because the way I was going to do it was with ::after and according to StackOverflow you can't use ::after in pure jQuery so that's why it's just a straight up button.
+
 I most definitely could have made some variables for my selectors but my wrist just popped in a way I've never heard before.
 
 I added in a little slide-out effect too, just for consistency. Also, I really wanted to do this cool little animated x that just twists 90 degrees on hover, but it had a lot of pseudo element stuff that even if I could have put it in my jQuery, it would have almost doubled my code! Take my word for it, it would have looked hella cool.

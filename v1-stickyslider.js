@@ -1,14 +1,8 @@
 jQuery(document).ready(function() {
-	!function(n){"use strict";function r(n){var r=i.exec(n.toString());if(!r)throw new TypeError("Multiline comment missing.");return r[1]}function t(n,r){return n.replace(c,function(n,t){for(var i=t.split("."),o=i.length,s=r,u=0;o>u;u++){if(s=s[i[u]],s===e)throw'tim: "'+i[u]+'" not found in '+n;if(u===o-1)return s}})}n.timpl=function(n,e){return t(n.call?r(n):n,e||{}).replace(/^\s+|\s+$/g,"")};var e,i=/\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)[ \t]*\*\//,o="{{",s="}}",u="[a-z0-9_$][\\.a-z0-9_]*",c=new RegExp(o+"\\s*("+u+")\\s*"+s,"gi")}(window);
-		
-		jQuery('#stickyDiv').hide();
-			
-		// if(!jQuery('#cartHeader').html().indexOf('my cart (0)') > -1){
-    		
-    			jQuery('#containDiv').animate({width:'toggle'},3000); 
-    		
-        // }
-		   
+
+	jQuery('#containDiv').hide('slide', 'right');
+
+	!function(n){"use strict";function r(n){var r=i.exec(n.toString());if(!r)throw new TypeError("Multiline comment missing.");return r[1]}function t(n,r){return n.replace(c,function(n,t){for(var i=t.split("."),o=i.length,s=r,u=0;o>u;u++){if(s=s[i[u]],s===e)throw'tim: "'+i[u]+'" not found in '+n;if(u===o-1)return s}})}n.timpl=function(n,e){return t(n.call?r(n):n,e||{}).replace(/^\s+|\s+$/g,"")};var e,i=/\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)[ \t]*\*\//,o="{{",s="}}",u="[a-z0-9_$][\\.a-z0-9_]*",c=new RegExp(o+"\\s*("+u+")\\s*"+s,"gi")}(window);		   
 
 		var html = timpl(function () {/*
 		<div id="containDiv">
@@ -30,8 +24,8 @@ jQuery(document).ready(function() {
 							<p class="productInfo">Qty: 1</p>
 						</div>
 						<div id="btnDiv">
-							<button class="btn" id="shopBtn">Continue Shopping</button>
-							<button class="btn" id="cartBtn">VIEW CART</button><div class="arrowRight"></div>
+							<button class="btn" id="shopBtn"><a href="#">Continue Shopping</a></button>
+							<button class="btn" id="cartBtn"><a href="http://www.bludot.com/checkout/cart/">VIEW CART</a></button><div class="arrowRight"></div>
 						</div>
 					</div>
 				</div>
@@ -39,9 +33,11 @@ jQuery(document).ready(function() {
 		</div>
 		*/});
 
-	jQuery('body').append(html);
+	
 
 	jQuery('img').css('width', '100%');
+
+	jQuery('button a').css({'text-decoration': 'none', 'color': 'white'});
 
 	jQuery('.xlink').css({
 		'text-decoration': 'none',
@@ -94,7 +90,7 @@ jQuery(document).ready(function() {
 
 	jQuery('#productImgDiv').css({
 		'box-sizing': 'border-box',
-		'width': '75px',
+		'width': '50px',
 		'display': 'inline-block'
 	});
 
@@ -127,20 +123,38 @@ jQuery(document).ready(function() {
 
 	jQuery('#btnDiv').css({
 		'box-sizing': 'border-box',
-		'margin': '20px 0 20px 0'
+		'margin': '20px 0 20px 0',
+		'color': 'white !important'
 
 	});
 
-	jQuery('#cartBtn').css('background-color', 'orange');
+	jQuery('#cartBtn').css({
+		'background-color': 'orange',
+		'color': 'white !important',
+		'text-decoration': 'none'
+	});
 
 	jQuery('#shopBtn').css({
 		'margin-right': '30px',
-		'width': '140px'
+		'width': '140px',
+		'color': 'white !important',
+		'text-decoration': 'none'
 	});
 
 	jQuery('.xlink, .btn').click(function() {
 		jQuery('#stickyDiv').hide();
 		alert('{closed-modal|view-cart|checkout}');
 	});
+
+	if(!jQuery('#cartHeader').html().indexOf('my cart (0)') > -1){
+		
+		var stickyShow = function() {
+			jQuery('body').append(html);
+			jQuery("#stickyDiv").show("slide", { direction: "left" }, 1000);
+			console.log('stickyShow fire');
+		};
+
+		setTimeout(stickyShow, 3000);
+	}
 
 });
